@@ -13,10 +13,6 @@ How can organizations optimize compensation structures to balance cost efficienc
 4. Create a unified data warehouse integrating multiple payroll data sources
 5. Implement efficient ETL processes for data integration and transformation
 
-## Team Members (Group 9)
-- Samyuktha Kapoor (rajeshkapoor.s@northeastern.edu)
-- Harshitha Chandrashekar (chandrashekar.h@northeastern.edu)
-
 ## Technologies Used
 - **PostgreSQL**: Primary database for the data warehouse
 - **Talend Open Studio**: ETL tool for data integration and transformation
