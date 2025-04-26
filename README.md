@@ -16,7 +16,7 @@ How can organizations optimize compensation structures to balance cost efficienc
 ## Technologies Used
 - **PostgreSQL**: Primary database for the data warehouse
 - **Talend Open Studio**: ETL tool for data integration and transformation
-- **Power BI**: Dashboard visualization and reporting
+- **Tableau**: Dashboard visualization and reporting
 
 ## Key Findings
 - **Attrition Analysis**: R&D department has the highest attrition rate at 5.0%, followed by Legal at 4.0%, IT at 3.3%, Engineering at 2.9%, and HR at 2.5%, while Finance has the lowest at 0.0%
@@ -54,7 +54,7 @@ As documented in our project, we utilized:
 3. Execute the `DWH_controlflow` job to run the complete ETL process
 
 ### Dashboard Setup
-1. Open the Power BI template provided in the `Dashboard` directory
+1. Open the Tableau template provided in the `Dashboard` directory
 2. Connect to your PostgreSQL data warehouse
 3. Refresh the data to visualize current insights
 
@@ -62,5 +62,5 @@ As documented in our project, we utilized:
 - `/Documentation`: Detailed project documentation
 - `/SQL`: Database schema and query definitions
 - `/ETL`: Talend job exports and transformation scripts
-- `/Dashboard`: Power BI templates and exported visualizations
+- `/Dashboard`: Tableau templates and exported visualizations
 - `/Data`: Sample data files and data dictionary
