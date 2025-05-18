@@ -13,4 +13,4 @@ Our data warehouse follows a star schema design optimized for analytical queries
 
 The following diagram illustrates the relationships between our fact and dimension tables:
 
-![Star Schema Diagram](./images/architecture_diagram.png)
+![Star Schema Diagram](./images/Star_Diagram.png)
