@@ -4,9 +4,7 @@ This directory contains the Power BI dashboard files and assets for the Payroll 
 
 ## Files
 
-- `Payroll_Analysis.pbix` - Main Power BI dashboard file
-- `/screenshots` - Screenshots of dashboard components
-- `/data_models` - Data model documentation for Power BI
+- `Payroll_Analysis Dashboard Link` - 
 
 ## Dashboard Components
 
@@ -39,11 +37,10 @@ The dashboard connects to the PostgreSQL data warehouse using:
 
 The dashboard is configured for:
 
-1. Automatic refresh: Daily at 6:00 AM EST
-2. Manual refresh: Available through the Refresh button
+- Manual refresh: Available through the Refresh button
 
 ## Using the Dashboard
 
-1. Open the `.pbix` file in Power BI Desktop
+1. Open the link of the file in Tableau Desktop or website
 2. Update the data source connection to your PostgreSQL instance
 3. Refresh data to see current insights
