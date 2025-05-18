@@ -6,7 +6,7 @@ This guide explains the visualizations and insights available in our Payroll Ana
 
 The Payroll Analysis Dashboard provides a comprehensive view of compensation metrics, departmental costs, attrition rates, and overtime expenditure. It is designed to support data-driven decisions for HR and Finance stakeholders.
 
-![Dashboard Screenshot](../Dashboard/screenshots/main_dashboard.png)
+![Dashboard](./images/Dashboard.png)
 
 ## Dashboard Components
 
