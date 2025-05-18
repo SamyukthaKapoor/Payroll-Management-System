@@ -1,0 +1,85 @@
+# Talend ETL Implementation
+
+This directory contains the Talend Open Studio project files and documentation for our Payroll Management System Data Warehouse ETL implementation.
+
+## Control Flow Overview
+
+The main control flow (`DWI_controlFlow`) orchestrates the loading of all dimension and fact tables in the proper sequence, ensuring data integrity and dependency management.
+
+![Control Flow Diagram](../assets/DWI_controlFlow.png)
+
+## Component Structure
+
+Our ETL implementation includes:
+
+- Source system connection to PostgreSQL source database
+- Target warehouse connection for the dimensional model
+- Dimension loading jobs executed in sequence to respect dependencies
+- Fact table loading with surrogate key resolution
+
+## Job Files
+
+### Main Control Job
+- `DWI_controlFlow_0.1.item`: Orchestrates the entire ETL process
+
+### Dimension Loading Jobs
+- `stateLoad_0.1.item`: State dimension loading
+- `cityLoad_0.1.item`: City dimension loading with state references
+- `branch_0.1.item`: Branch location dimension loading
+- `department_0.1.item`: Department dimension loading
+- `employeeLoad_0.1.item`: Employee dimension with SCD Type-2
+- `deductions_0.1.item`: Deductions dimension loading
+- `designation_0.1.item`: Job titles and positions dimension
+- `overtime_0.1.item`: Overtime records dimension
+- `date_load_0.1.item`: Date dimension generation
+
+### Fact Table Job
+- `Payroll_Fact_0.1.item`: Fact table loading with dimension references
+
+## Data Transformations
+
+Throughout the ETL process, we implement several key transformations:
+- Business key to surrogate key mapping
+- Type-2 SCD processing for historical tracking in employee dimension
+- Date standardization to YYYY-MM-DD format
+- Calculated field generation for metrics like:
+ - Overtime cost: `overtime_hours * overtime_rate`
+ - Net pay: `base_pay + overtime_cost - deduction_amount`
+
+## ETL Execution Process
+
+To execute the ETL process:
+1. Configure connection parameters in context files
+2. Run the `DWI_controlFlow` job
+3. Monitor execution through Talend's console
+4. Verify data loading through table counts
+
+## Job Dependencies
+
+The jobs follow this dependency hierarchy: 
+
+DWI_controlFlow
+├── stateLoad
+├── cityLoad
+├── Branch
+├── department
+├── employeeLoad
+├── Deductions
+├── Designation
+├── overtime
+├── date_load
+└── Payroll_Fact
+
+ ## Importing These Files
+
+1. Open Talend Open Studio for Data Integration
+2. Select File > Import > Import items
+3. Browse to the job files location
+4. Select all .item files
+5. Complete the import process
+
+## Additional Resources
+
+- `sql/`: Contains DDL and sample queries
+- `screenshots/`: Visual documentation of job designs
+- `context/`: Environment-specific configuration files
